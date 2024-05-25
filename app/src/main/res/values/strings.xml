@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Asclepius</string>
+    <string name="camera_x">CameraX</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="analyze">Analyze</string>
+    <string name="result">Hasil Analisis</string>
+    <string name="image_classifier_failed">Failed to initialize classifier</string>
+    <string name="placeholder_result">placeholder_result</string>
+    <string name="classification_history_is_empty">Classification History is empty</string>
+    <string name="network_error_message">A network error occurred, tap to try again</string>
+    <string name="save_result">Save Result</string>
+    <string name="classification_history">Classification History</string>
+    <string name="cancer_news">Cancer News</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="classification_score">classification_score</string>
+    <string name="classification_label">classification_label</string>
+    <string name="news_title">news_title</string>
+    <string name="news_description">news_description</string>
+</resources>
