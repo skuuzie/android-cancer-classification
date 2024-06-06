@@ -10,14 +10,14 @@ import com.dicoding.asclepius.data.local.database.ClassificationHistory
 import com.dicoding.asclepius.databinding.ActivityClassificationHistoryBinding
 import com.dicoding.asclepius.view.adapter.ClassificationHistoryAdapter
 import com.dicoding.asclepius.view.model.ClassificationHistoryModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ClassificationHistoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityClassificationHistoryBinding
     private lateinit var adapter: ClassificationHistoryAdapter
 
-    private val classificationHistoryModel: ClassificationHistoryModel by viewModels {
-        ClassificationHistoryModel.Factory
-    }
+    private val classificationHistoryModel: ClassificationHistoryModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

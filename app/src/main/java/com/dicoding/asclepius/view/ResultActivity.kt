@@ -11,10 +11,12 @@ import com.dicoding.asclepius.databinding.ActivityResultBinding
 import com.dicoding.asclepius.helper.ImageClassifierHelper
 import com.dicoding.asclepius.helper.NumberUtil.toReadablePercentage
 import com.dicoding.asclepius.view.model.ResultActivityModel
+import dagger.hilt.android.AndroidEntryPoint
 import org.tensorflow.lite.task.vision.classifier.Classifications
 import java.io.File
 import java.util.Date
 
+@AndroidEntryPoint
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
     private lateinit var imageClassifierHelper: ImageClassifierHelper
@@ -23,9 +25,7 @@ class ResultActivity : AppCompatActivity() {
     private var savedImageNameFormat = "%s.jpg"
     private var savedImageUri: Uri? = null
 
-    private val resultActivityModel: ResultActivityModel by viewModels {
-        ResultActivityModel.Factory
-    }
+    private val resultActivityModel: ResultActivityModel by viewModels()
 
     private var currentImageUri: Uri? = null
     private var currentImageLabel: String? = null

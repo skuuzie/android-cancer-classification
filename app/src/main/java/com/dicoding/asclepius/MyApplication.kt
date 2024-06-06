@@ -1,18 +1,7 @@
 package com.dicoding.asclepius
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class MyApplication : Application() {
-    lateinit var appContainer: AppContainer
-
-    companion object {
-        lateinit var instance: MyApplication
-            private set
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-        instance = this
-        appContainer = AppContainer()
-    }
-}
+@HiltAndroidApp
+class MyApplication : Application()

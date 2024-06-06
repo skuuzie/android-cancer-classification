@@ -5,8 +5,11 @@ import com.dicoding.asclepius.data.local.database.ClassificationHistoryDao
 import kotlinx.coroutines.flow.Flow
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class ClassificationHistoryRepository(
+@Singleton
+class ClassificationHistoryRepository @Inject constructor(
     private val mClassificationHistoryDao: ClassificationHistoryDao
 ) {
     private val executorService: ExecutorService = Executors.newSingleThreadExecutor()

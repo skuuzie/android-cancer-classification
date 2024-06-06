@@ -12,14 +12,14 @@ import com.dicoding.asclepius.data.remote.ArticlesItem
 import com.dicoding.asclepius.databinding.ActivityCancerNewsBinding
 import com.dicoding.asclepius.view.adapter.CancerNewsAdapter
 import com.dicoding.asclepius.view.model.CancerNewsModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CancerNewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCancerNewsBinding
     private lateinit var adapter: CancerNewsAdapter
 
-    private val cancerNewsModel: CancerNewsModel by viewModels {
-        CancerNewsModel.Factory
-    }
+    private val cancerNewsModel: CancerNewsModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
